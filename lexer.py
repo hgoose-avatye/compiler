@@ -35,7 +35,7 @@ def tokenize(src: str) -> list[Token]:
         # 첫글자는 '_' 또는 글자
         elif ch.isalpha() or ch == '_':
             var_name = ''
-            while i < len(src) and src[i].isalnum() or src[i] == '_':
+            while i < len(src) and (src[i].isalnum() or src[i] == '_'):
                 var_name += src[i]
                 i += 1
             if var_name in KEYWORDS:
